@@ -1,0 +1,71 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.notavif.notwebp .header {
+    background-image: url('../img/header.jpg');
+}
+
+.avif .header {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5)/*, rgba(0, 0, 0, 0.5)*/), url('../img/header.avif');
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/header.avif');
+    // background-image: url('../img/header.avif');
+}
+
+.webp.nofavif .header {
+    background-image: url('../img/header.webp');
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.header {
+    padding: v.$separacion 0;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include m.tablet { 
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        img {
+            width: 30rem;
+        }
+    }
+    
+}
+
+.nav {
+    margin-top: v.$separacion;
+    ul {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        margin: 0;
+        a {
+            padding: 0.5rem;
+            display: block;
+        }
+    }
+
+    &__element {
+        color: v.$blanco;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+}

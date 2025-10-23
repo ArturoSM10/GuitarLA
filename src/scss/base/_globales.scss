@@ -13,7 +13,8 @@ html {
 
 body {
      font-family: v.$fuentePrincipal;
-     font-size: 1.6rem;
+     font-size: 2rem;
+     line-height: 1.5;
 }
 
 p {
@@ -23,6 +24,7 @@ p {
 
 a {
     text-decoration: none;
+    background-color: transparent;
 }
 
 img {
