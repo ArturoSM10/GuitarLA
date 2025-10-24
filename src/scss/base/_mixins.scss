@@ -25,13 +25,14 @@
 }
 
 @mixin btn($backgroundColor, $fontColor) {
+    font-size: 1.4rem;
     text-transform: uppercase;
     background-color: $backgroundColor;
     color: $fontColor;
     border: 2px solid v.$primario;
     font-weight: 700;
     margin-top: 2rem;
-    padding: 0 v.$separacion;
+    padding: 1rem v.$separacion;
     transition: 0.3s all ease;
     &:hover {
         background-color: v.$primario;
