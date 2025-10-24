@@ -1,0 +1,40 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.hero {
+    @include m.tablet { 
+        @include m.grid(2, v.$separacion);
+    }
+    
+    &__card {
+        color: v.$blanco;
+        text-align: center;
+        @include m.tablet { 
+             text-align: left;
+        }
+        .card__title {
+            font-size: 8rem;
+            margin: v.$separacion 0;
+        }
+        
+        .card__text {
+            text-align: center;
+            color: v.$blanco;
+            @include m.tablet { 
+                 text-align: left;
+            }
+        }
+        
+        .card__price {
+            color: v.$primario;
+            font-size: 6rem;
+            font-weight: 900;
+            line-height: 0;
+        }
+
+        .card__btn--blanco {
+            @include m.btn(transparent, v.$blanco);
+        }
+
+    }
+}
