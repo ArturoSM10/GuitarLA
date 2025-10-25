@@ -25,16 +25,5 @@
             }
         }
         
-        .card__price {
-            color: v.$primario;
-            font-size: 6rem;
-            font-weight: 900;
-            line-height: 0;
-        }
-
-        .card__btn--blanco {
-            @include m.btn(transparent, v.$blanco);
-        }
-
     }
 }

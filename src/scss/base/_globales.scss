@@ -1,4 +1,5 @@
 @use 'variables' as v;
+@use '../base/mixins' as m;
 
 html {
     box-sizing: border-box;
@@ -56,4 +57,19 @@ li {
     max-width: 1200px;
     width: 95%;
     margin: 0 auto;
+}
+
+.card__price {
+    color: v.$primario;
+    font-size: 6rem;
+    font-weight: 900;
+    line-height: 0;
+}
+
+.card__btn--blanco {
+    @include m.btn(transparent, v.$blanco);
+}
+
+.card__btn--negro {
+    @include m.btn(transparent, v.$negro);
 }
