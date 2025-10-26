@@ -1,0 +1,59 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.avif .cursos {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url('../img/cursos_bg.avif');
+} 
+
+.notavif.webp .cursos {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url('../img/cursos_bg.webp');
+}
+
+.notavif.notwebp .cursos {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url('../img/cursos_bg.jpg');
+}
+
+
+.cursos {
+    margin: 10rem 0 0;
+    padding: 10rem 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    
+    &__contenedor {
+        @include m.tablet { 
+            @include m.grid(2, 2rem);
+        }
+    }
+
+    &__contenido {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include m.tablet { 
+            grid-column: 2/3;
+        }
+    }
+
+    &__title {
+        color: v.$primario;
+        text-align: center;
+        font-size: 4rem;
+        font-weight: 900;
+        margin: v.$separacion 0;
+    }
+
+    &__p {
+        color: v.$blanco;
+        font-size: 2.4rem;
+        text-align: center;
+    }
+
+    .card__btn--blanco {
+        width: fit-content;
+        margin: 2rem auto 0;
+    }
+}
