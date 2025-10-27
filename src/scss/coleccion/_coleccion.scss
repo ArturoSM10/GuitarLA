@@ -14,40 +14,44 @@
         @include m.tablet { 
             @include m.grid(2, 4rem);
         }
+
+        @include m.desktop { 
+            @include m.grid(3, 4rem);
+        }
+    }
+
+    .card {
+        @include m.grid(2, 1rem);
+        grid-template-columns: 1fr 1.5fr;
+        margin-bottom: v.$separacion;
+        align-items: center;
+    
+        @include m.tablet { 
+            margin-bottom: 0;
+        }
+    
+        &__title {
+            text-transform: uppercase;
+            margin: 3rem 0;
+            font-size: 3rem;
+        }
+    
+        &__p {
+            font-size: 1.6rem;
+        }
+    
+        &__price {
+            line-height: 1.5;
+            margin: 0;
+        }
+    
+        &__btn--negro {
+            display: block;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 900;
+        }
     }
 }
 
-.card {
-    @include m.grid(2, 1rem);
-    grid-template-columns: 1fr 1.5fr;
-    margin-bottom: v.$separacion;
-    align-items: center;
 
-    @include m.tablet { 
-        margin-bottom: 0;
-    }
-
-    &__title {
-        text-transform: uppercase;
-        margin: 3rem 0;
-        font-size: 3rem;
-    }
-
-    &__p {
-        font-size: 1.6rem;
-    }
-
-    &__price {
-        line-height: 1.5;
-        margin: 0;
-    }
-
-    &__btn--negro {
-        display: block;
-        text-align: center;
-        font-size: 1.2rem;
-        font-weight: 900;
-    }
-
-
-}
