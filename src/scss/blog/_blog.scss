@@ -1,0 +1,64 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.blog {
+    &__title {
+        color: v.$primario;
+        font-size: 4rem;
+        font-weight: 900;
+        text-transform: capitalize;
+        margin: v.$separacion 0;
+
+    }
+
+    &__contenedor {
+        @include m.tablet { 
+            @include m.grid(2, 4rem);
+        }
+
+        @include m.desktop { 
+            @include m.grid(4, 4rem);
+        }
+    }
+
+}
+
+.card-blog {
+    &__img {
+        
+    }
+
+    &__info {
+        padding: 2rem;
+        margin-bottom: 4rem;
+
+        @include m.tablet { 
+            margin-bottom: 0;
+        }
+    }
+    
+    &__title {
+        font-size: 2.8rem;
+        font-weight: 400;
+        margin: 0 0 1rem;
+        line-height: 1.2;
+    }
+
+    &__p {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        font-size: 1.6rem;
+        overflow: hidden;
+    }
+
+    &__p--amarillo {
+        color: v.$primario;
+        margin: 0;
+        font-size: 1.6rem;
+    }
+
+    .card__btn--negro {
+
+    }
+}
