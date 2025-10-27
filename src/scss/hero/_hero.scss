@@ -3,7 +3,7 @@
 
 .hero {
     @include m.tablet { 
-        @include m.grid(2, v.$separacion);
+        @include m.grid(2, 0);
     }
     
     &__card {
