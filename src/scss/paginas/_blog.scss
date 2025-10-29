@@ -1,0 +1,11 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.blog__contenedor--externa {
+    @include m.tablet {
+        @include m.grid(2, v.$separacion);
+    }
+    @include m.desktop {
+        @include m.grid(3, v.$separacion);
+    }
+}
