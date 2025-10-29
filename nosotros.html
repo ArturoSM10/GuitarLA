@@ -29,7 +29,7 @@
                 <nav class="nav">
                     <ul>
                         <li><a class="nav__element" href="./index.html">Inicio</a></li>
-                        <li><a class="nav__element" href="#">Nosotros</a></li>
+                        <li><a class="nav__element" href="./nosotros.html">Nosotros</a></li>
                         <li><a class="nav__element" href="#">Blog</a></li>
                         <li><a class="nav__element" href="#">Tienda</a></li>
                     </ul>
@@ -39,40 +39,23 @@
     </header>
 
     <main>
-        <section class="producto contenedor">
-            <div class="producto__img">
-                <picture>
-                    <source srcset="./build/img/guitarra_04.avif" type="image/avif">
-                    <source srcset="./build/img/guitarra_04.webp" type="image/webp">
-                    <img decoding="async" loading="lazy" src="./build/img/guitarra_04.jpg" alt="Imagen de guitarra Vai">
-                </picture>
+        <section class="contenedor">
+            <h2 class="nosotros__title text-center">Nosotros</h2>
+            <div class="nosotros">
+                <div class="nosotros__img">
+                    <picture>
+                        <source srcset="./build/img/nosotros.avif" type="image/avif">
+                        <source srcset="./build/img/nosotros.webp" type="image/webp">
+                        <img decoding="async" loading="lazy" src="./build/img/nosotros.jpg" alt="Imagen de guitarra Vai">
+                    </picture>
+                </div>
+    
+                <div class="nosotros__info">
+                    <p class="nosotros__p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur recusandae obcaecati, ipsam hic assumenda excepturi repellat explicabo blanditiis dolorem quisquam similique eum, consequuntur vel commodi! Recusandae assumenda distinctio quidem dolorem!</p>
+    
+                    <p class="nosotros__p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur recusandae obcaecati, ipsam hic assumenda excepturi repellat explicabo blanditiis dolorem quisquam similique eum, consequuntur vel commodi! Recusandae assumenda distinctio quidem dolorem!</p>
+                </div>
             </div>
-
-            <div class="producto__info">
-                <h3 class="info__title">Vai</h3>
-                <p class="info__p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem praesentium quam dolores eveniet</p>
-                <p class="card__price">$399</p>
-                <form class="form">
-                    <div class="form__cantidad">
-                        <label class="cantidad__label" for="cantidad">Cantidad:</label>
-                        <select class="cantidad__select" id="cantidad">
-                            <option value="" selected disabled>-- Seleccione --</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
-                        <input class="card__btn--blanco" type="button" value="Agregar al carrito">
-                    </div>
-                </form>
-            </div>
-
         </section>
     </main>
 
