@@ -2,10 +2,17 @@
 @use '../base/mixins' as m;
 
 .blog__contenedor--externa {
+
+    .entrada__enlace {
+        display: block;
+        text-align: center;
+    }
+
     @include m.tablet {
         @include m.grid(2, v.$separacion);
     }
     @include m.desktop {
         @include m.grid(3, v.$separacion);
     }
+
 }
